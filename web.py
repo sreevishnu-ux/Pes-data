@@ -8,7 +8,7 @@ soup=BeautifulSoup(get_url.text,"html.parser")
 Name= [i.text for i in soup.findAll('div',{'class':'player-card-name'})]
 Role= [i.text for i in soup.findAll('div',{'class':'player-card-position'})]
 
-
+#TO GET THE DATA IN TABULAR FORM
 Table=pd.DataFrame({
     "Name":Name,
     "Role": Role})
